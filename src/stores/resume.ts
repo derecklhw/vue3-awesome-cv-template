@@ -8,7 +8,7 @@ export const useResumeStore = defineStore('resume', () => {
     color: '',
     fontFamily: '',
     loadingScreen: {
-      imageUrl:'/assets/mario-jump.gif',
+      imageUrl: '/mario-jump.gif',
       text: 'Here we go... preparing your adventure!'
     }
   })
