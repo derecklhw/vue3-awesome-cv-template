@@ -12,10 +12,27 @@ export const useResumeStore = defineStore('resume', () => {
       text: ''
     }
   })
-  const header = ref({})
+  const header = ref({
+    firstName: '',
+    lastName: '',
+    title: '',
+    address: '',
+    phone: '',
+    homepage: '',
+    socials: [
+      {
+        name: '',
+        url: ''
+      }
+    ],
+    quote: ''
+  })
   const summary = ref()
   const experience = ref([])
-  const honors = ref({})
+  const honors = ref({
+    international: [],
+    domestic: []
+  })
   const presentation = ref([])
   const writing = ref([])
   const committee = ref([])
