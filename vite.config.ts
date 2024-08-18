@@ -21,7 +21,6 @@ export default defineConfig(({ mode }) => {
     },
     define: {
       'process.env': env
-    },
-    base: '/vue3-awesome-cv-template'
+    }
   }
 })
