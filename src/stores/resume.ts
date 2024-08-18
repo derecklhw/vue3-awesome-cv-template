@@ -1,8 +1,11 @@
 import { ref, computed } from 'vue'
 import { defineStore } from 'pinia'
+import type { get } from 'http'
 
 export const useResumeStore = defineStore('resume', () => {
   // state
+  const resumeLoading = ref(true)
+  const visitorCounterEnabled = ref<boolean>()
   const visitorCount = ref(0)
   const styles = ref({
     color: '',
@@ -41,6 +44,8 @@ export const useResumeStore = defineStore('resume', () => {
   const extracurricular = ref([])
 
   // getters
+  const getResumeLoading = computed(() => resumeLoading.value)
+  const getVisitorCounterEnabled = computed(() => visitorCounterEnabled.value)
   const getVisitorCount = computed(() => visitorCount.value)
   const getStyles = computed(() => styles.value)
   const getHeader = computed(() => header.value)
@@ -55,6 +60,14 @@ export const useResumeStore = defineStore('resume', () => {
   const getExtracurricular = computed(() => extracurricular.value)
 
   // actions
+  async function setResumeLoading() {
+    resumeLoading.value = !resumeLoading.value
+  }
+
+  async function setVisitorCounterEnabled(enable: boolean) {
+    visitorCounterEnabled.value = enable
+  }
+
   async function setStylesData(path: string) {
     try {
       const res = await fetch(path)
@@ -65,6 +78,7 @@ export const useResumeStore = defineStore('resume', () => {
         styles.value.fontFamily = data.fontFamily
         styles.value.loadingScreen.imageUrl = data.loadingScreen.imageUrl
         styles.value.loadingScreen.text = data.loadingScreen.text
+        setResumeLoading()
       } else {
         throw new Error('Invalid response format')
       }
@@ -128,6 +142,8 @@ export const useResumeStore = defineStore('resume', () => {
   }
 
   return {
+    getResumeLoading,
+    getVisitorCounterEnabled,
     getVisitorCount,
     getStyles,
     getHeader,
@@ -141,6 +157,7 @@ export const useResumeStore = defineStore('resume', () => {
     getEducation,
     getExtracurricular,
 
+    setVisitorCounterEnabled,
     setStylesData,
     setResumeData,
     setVisitorCount,

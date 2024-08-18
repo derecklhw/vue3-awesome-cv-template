@@ -22,4 +22,14 @@
 import { useResumeStore } from '@/stores/resume'
 const resumeStore = useResumeStore()
 </script>
-<style lang=""></style>
+<style scoped>
+.blink_me {
+  animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+</style>

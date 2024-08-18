@@ -1,6 +1,30 @@
+<template>
+  <div
+    class="flex justify-center md:p-4"
+    :style="{ 'font-family': resumeStore.getStyles.fontFamily }"
+  >
+    <ResumeLoading v-if="resumeloading" />
+
+    <div class="py-8 px-6 md:px-24 space-y-4 w-full md:w-5/6 bg-white shadow-lg md:text-2xl" v-else>
+      <ResumeVisitorCounter v-if="resumeStore.getVisitorCounterEnabled" />
+      <ResumeHeader />
+      <ResumeSummary />
+      <ResumeExperience />
+      <ResumeHonors />
+      <ResumePresentation />
+      <ResumeWriting />
+      <ResumeCommittee />
+      <ResumeSkills />
+      <ResumeEducation />
+      <ResumeExtracurricular />
+      <ResumeFooter />
+    </div>
+  </div>
+</template>
+
 <script setup lang="ts">
 import { useResumeStore } from '@/stores/resume'
-import { onBeforeMount } from 'vue'
+import { onMounted, computed } from 'vue'
 
 import ResumeLoading from './components/ResumeLoading.vue'
 import ResumeVisitorCounter from './sections/ResumeVisitorCounter.vue'
@@ -18,48 +42,32 @@ import ResumeFooter from './sections/ResumeFooter.vue'
 
 const resumeStore = useResumeStore()
 
-onBeforeMount(() => {
-  resumeStore.setResumeData('resume.json')
-  resumeStore.setStylesData('styles.json')
-  if (performance.navigation.type == performance.navigation.TYPE_RELOAD) {
-    resumeStore.setVisitorCount()
-  } else {
-    resumeStore.updateVisitorCount()
-  }
+const resumeloading = computed(() =>
+  resumeStore.getVisitorCounterEnabled
+    ? resumeStore.getResumeLoading || resumeStore.getVisitorCount === 0
+    : resumeStore.getResumeLoading
+)
+
+onMounted(() => {
+  initialiseResumeStore()
 })
-</script>
 
-<template>
-  <ResumeLoading v-if="resumeStore.getVisitorCount === 0" />
+const initialiseResumeStore = () => {
+  resumeStore.setStylesData('styles.json')
+  resumeStore.setResumeData('resume.json')
 
-  <div
-    class="py-8 px-6 md:px-24 space-y-4 w-full md:w-5/6 bg-white md:m-4 shadow-lg md:text-2xl"
-    :style="{ 'font-family': resumeStore.getStyles.fontFamily }"
-    v-else
-  >
-    <ResumeVisitorCounter />
-    <ResumeHeader />
-    <ResumeSummary />
-    <ResumeExperience />
-    <ResumeHonors />
-    <ResumePresentation />
-    <ResumeWriting />
-    <ResumeCommittee />
-    <ResumeSkills />
-    <ResumeEducation />
-    <ResumeExtracurricular />
-    <ResumeFooter />
-  </div>
-</template>
+  resumeStore.setVisitorCounterEnabled(
+    process.env.VUE_APP_INCREMENT_VISITOR_COUNT_API && process.env.VUE_APP_SET_VISITOR_COUNT_API
+      ? true
+      : false
+  )
 
-<style scoped>
-.blink_me {
-  animation: blinker 1s linear infinite;
-}
-
-@keyframes blinker {
-  50% {
-    opacity: 0;
+  if (resumeStore.getVisitorCounterEnabled) {
+    if (performance.navigation.type == performance.navigation.TYPE_RELOAD) {
+      resumeStore.setVisitorCount()
+    } else {
+      resumeStore.updateVisitorCount()
+    }
   }
 }
-</style>
+</script>

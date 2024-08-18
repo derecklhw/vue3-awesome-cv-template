@@ -5,6 +5,4 @@
 #app {
   background-color: rgb(115 115 115);
   width: 100%;
-  display: flex;
-  justify-content: center;
 }
