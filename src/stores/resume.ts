@@ -8,204 +8,20 @@ export const useResumeStore = defineStore('resume', () => {
     color: '',
     fontFamily: '',
     loadingScreen: {
-      imageUrl: '/mario-jump.gif',
-      text: 'Here we go... preparing your adventure!'
+      imageUrl: '',
+      text: ''
     }
   })
-  const header = ref({
-    firstName: 'Mario',
-    lastName: 'Mario',
-    title: 'Professional Plumber · Hero of the Mushroom Kingdom',
-    address: '123 Pipe Street, Mushroom Kingdom, 12345',
-    phone: '(+1) 555-JUMP-MAN',
-    homepage: 'www.supermario.com',
-    socials: [
-      { name: 'Google', url: 'mario@gmail.com' },
-      { name: 'Github', url: 'itsamemario' },
-      { name: 'Linkedin', url: 'mariobros' }
-    ],
-    quote: 'It\'s-a me, Mario! Let\'s-a go!'
-  })
-  
-  const summary = ref(
-    'Experienced hero and plumber with over 35 years of rescuing princesses, defeating evil kings, and saving various kingdoms. Skilled in jumping, powerup utilization, and kart racing. Known for quick problem-solving skills and adaptability in face of diverse challenges. Always ready for a new adventure, whether it\'s in 2D or 3D!'
-  )
-  
-  const experience = ref([
-    {
-      company: 'Mushroom Kingdom Royal Guard',
-      url: 'https://www.mushroomkingdom.com',
-      location: 'Mushroom Kingdom',
-      title: 'Chief Hero and Princess Rescuer',
-      startDate: 'Jul. 1985',
-      endDate: 'Present',
-      responsibilities: [
-        'Successfully thwarted numerous kidnapping attempts by Bowser, ensuring the safety of Princess Peach.',
-        'Navigated through complex castle systems, overcoming various obstacles and enemies.',
-        'Mastered the use of power-ups such as Super Mushrooms, Fire Flowers, and Star Power to combat threats.'
-      ]
-    },
-    {
-      company: 'Mario Bros. Plumbing',
-      url: 'https://www.mariobrosplumbing.com',
-      location: 'Brooklyn, New York',
-      title: 'Co-Founder & Master Plumber',
-      startDate: 'Jun. 1983',
-      endDate: 'Jul. 1985',
-      responsibilities: [
-        'Co-founded and operated a successful plumbing business with brother Luigi.',
-        'Specialized in pipe repair, drain cleaning, and mysterious underworld pipe system navigation.',
-        'Developed innovative techniques for coin collection and turtle shell repurposing.'
-      ]
-    }
-  ])
-  
-  const honors = ref({
-    international: [
-      {
-        title: 'Gold Medal',
-        event: 'Olympic Games',
-        date: '2020',
-        location: 'Tokyo, Japan'
-      },
-      {
-        title: 'MVP',
-        event: 'Smash Bros. Ultimate Tournament',
-        date: '2018',
-        location: 'Los Angeles, U.S.A'
-      },
-      {
-        title: 'Best Mustache',
-        event: 'Facial Hair Bros. Competition',
-        date: '2014',
-        location: 'Paris, France'
-      }
-    ],
-    domestic: [
-      {
-        title: '1st Place',
-        event: 'Mushroom Kingdom Grand Prix',
-        date: '2022',
-        location: 'Rainbow Road, Mushroom Kingdom'
-      },
-      {
-        title: 'Golden Coin Award',
-        event: 'Annual Coin Collecting Championship',
-        date: '2021',
-        location: 'Coin Heaven, Sky World'
-      },
-      {
-        title: 'Fire Flower Trophy',
-        event: 'Power-Up Mastery Competition',
-        date: '2019',
-        location: 'Peach\'s Castle, Mushroom Kingdom'
-      }
-    ]
-  })
-  
-  const presentation = ref([
-    {
-      company: 'Goomba Stomping Seminar',
-      location: 'Mushroom Kingdom',
-      title: 'Keynote Speaker on Advanced Jumping Techniques',
-      startDate: 'Sep. 2021',
-      endDate: 'Oct. 2021',
-      responsibilities: [
-        'Demonstrated various jumping techniques including the Triple Jump, Wall Jump, and Long Jump.',
-        'Discussed the history and evolution of enemy-stomping strategies in platform games.'
-      ]
-    },
-    {
-      company: '8th Pixel-Con (Retro Gaming Conference)',
-      location: 'New Donk City',
-      title: 'Presenter for "From 8-bit to HD: My Journey Through Video Game History"',
-      startDate: 'Apr. 2019',
-      endDate: '',
-      responsibilities: [
-        'Shared personal experiences of starring in video games across multiple generations and technological advancements.'
-      ]
-    }
-  ])
-  
-  const writing = ref([
-    {
-      company: 'The Plumber\'s Guide to Saving Princesses',
-      location: 'Mushroom Kingdom Press',
-      title: 'AUTHOR',
-      startDate: 'Jan. 2020',
-      endDate: '',
-      responsibilities: [
-        'Wrote a comprehensive guide on princess-saving techniques, castle navigation, and boss battle strategies.'
-      ]
-    }
-  ])
-  
-  const committee = ref([
-    {
-      title: 'Judge',
-      event: '2023 Mushroom Kingdom Kart Racing Championship',
-      date: '2023',
-      location: 'Various Tracks, Mushroom Kingdom'
-    },
-    {
-      title: 'Organizer & Host',
-      event: '1st Annual Mario Party',
-      date: '2018',
-      location: 'Peach\'s Castle, Mushroom Kingdom'
-    }
-  ])
-  
-  const skills = ref([
-    {
-      key: 'Athletics',
-      value: 'Jumping, Running, Swimming, Flying (with cape)'
-    },
-    { key: 'Combat', value: 'Fireball throwing, Hammer wielding, Goomba stomping' },
-    { key: 'Vehicles', value: 'Kart racing, Yoshi riding, Underwater navigation' },
-    { key: 'Power-ups', value: 'Super Mushroom, Fire Flower, Super Star, Tanooki Suit' },
-    { key: 'Tools', value: 'Plunger, Wrench, F.L.U.D.D., Various caps' },
-    { key: 'Languages', value: 'Italian, English, Yoshi, Goomba' },
-    { key: 'Others', value: 'Coin collecting, Pipe travel, Princess rescuing, Mini-game mastery' }
-  ])
-  
-  const education = ref([
-    {
-      company: 'Mushroom Kingdom Plumbing Academy',
-      location: 'Toad Town, Mushroom Kingdom',
-      title: 'MASTER\'S DEGREE IN ADVANCED PLUMBING AND HEROICS',
-      startDate: 'Sep. 1980',
-      endDate: 'Jun. 1983',
-      responsibilities: [
-        'Graduated with honors. Received the Golden Plunger Award for excellence in practical applications.'
-      ]
-    }
-  ])
-  
-  const extracurricular = ref([
-    {
-      company: "Mushroom Kingdom Sports Association",
-      location: 'Mushroom Kingdom',
-      title: 'All-Star Athlete',
-      startDate: 'Jan. 1996',
-      endDate: 'Present',
-      responsibilities: [
-        'Participated in various sports including tennis, golf, soccer, and Olympic events.',
-        'Organized friendly competitions to promote sportsmanship across different kingdoms.'
-      ]
-    },
-    {
-      company: 'Warp Pipe Explorers Club',
-      location: 'Various Kingdoms',
-      title: 'Founding Member',
-      startDate: 'Jul. 1985',
-      endDate: 'Present',
-      responsibilities: [
-        'Led expeditions to discover and map out new warp pipe routes across multiple worlds.',
-        'Conducted research on the physics of pipe travel and its applications in modern transportation.',
-        'Mentored young adventurers in the art of safe and effective warp pipe navigation.'
-      ]
-    }
-  ])
+  const header = ref({})
+  const summary = ref()
+  const experience = ref([])
+  const honors = ref({})
+  const presentation = ref([])
+  const writing = ref([])
+  const committee = ref([])
+  const skills = ref([])
+  const education = ref([])
+  const extracurricular = ref([])
 
   // getters
   const getVisitorCount = computed(() => visitorCount.value)
@@ -222,18 +38,59 @@ export const useResumeStore = defineStore('resume', () => {
   const getExtracurricular = computed(() => extracurricular.value)
 
   // actions
+  async function setStylesData(path: string) {
+    try {
+      const res = await fetch(path)
+      const data = await res.json()
+
+      if (data) {
+        styles.value.color = data.color
+        styles.value.fontFamily = data.fontFamily
+        styles.value.loadingScreen.imageUrl = data.loadingScreen.imageUrl
+        styles.value.loadingScreen.text = data.loadingScreen.text
+      } else {
+        throw new Error('Invalid response format')
+      }
+    } catch (e) {
+      console.error(e)
+    }
+  }
+
+  async function setResumeData(path: string) {
+    try {
+      const res = await fetch(path)
+      const data = await res.json()
+
+      if (data) {
+        header.value = data.header
+        summary.value = data.summary
+        experience.value = data.experience
+        honors.value = data.honors
+        presentation.value = data.presentation
+        writing.value = data.writing
+        committee.value = data.committee
+        skills.value = data.skills
+        education.value = data.education
+        extracurricular.value = data.extracurricular
+      } else {
+        throw new Error('Invalid response format')
+      }
+    } catch (e) {
+      console.error(e)
+    }
+  }
+
   async function setVisitorCount() {
     try {
       const res = await fetch(process.env.VUE_APP_SET_VISITOR_COUNT_API || '')
-      
+
       const data = await res.json()
       if (data.body && typeof data.body.views === 'number') {
-        visitorCount.value = data.body.views;
+        visitorCount.value = data.body.views
       } else {
-        throw new Error("Invalid response format");
+        throw new Error('Invalid response format')
       }
-    }
-    catch (e) {
+    } catch (e) {
       console.error(e)
     }
   }
@@ -244,12 +101,11 @@ export const useResumeStore = defineStore('resume', () => {
 
       const data = await res.json()
       if (data.body && typeof data.body.views === 'number') {
-        visitorCount.value = data.body.views;
+        visitorCount.value = data.body.views
       } else {
-        throw new Error("Invalid response format");
+        throw new Error('Invalid response format')
       }
-    }
-    catch (e) {
+    } catch (e) {
       console.error(e)
     }
   }
@@ -268,6 +124,8 @@ export const useResumeStore = defineStore('resume', () => {
     getEducation,
     getExtracurricular,
 
+    setStylesData,
+    setResumeData,
     setVisitorCount,
     updateVisitorCount
   }

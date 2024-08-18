@@ -19,6 +19,8 @@ import ResumeFooter from './sections/ResumeFooter.vue'
 const resumeStore = useResumeStore()
 
 onBeforeMount(() => {
+  resumeStore.setResumeData('resume.json')
+  resumeStore.setStylesData('styles.json')
   if (performance.navigation.type == performance.navigation.TYPE_RELOAD) {
     resumeStore.setVisitorCount()
   } else {
