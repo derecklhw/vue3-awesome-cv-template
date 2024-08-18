@@ -54,12 +54,8 @@ onMounted(() => {
 
 const initialiseResumeStore = async () => {
   const baseUrl = import.meta.env.BASE_URL || '/'
-  console.log(baseUrl)
-  const response = await fetch(`${baseUrl}resume.json`)
-  const data = await response.json()
-  console.log(response)
-  // resumeStore.setStylesData('/styles.json')
-  // resumeStore.setResumeData('/resume.json')
+  resumeStore.setStylesData(`${baseUrl}/styles.json`)
+  resumeStore.setResumeData(`${baseUrl}/resume.json`)
 
   resumeStore.setVisitorCounterEnabled(
     process.env.VUE_APP_INCREMENT_VISITOR_COUNT_API && process.env.VUE_APP_SET_VISITOR_COUNT_API
