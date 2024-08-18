@@ -4,7 +4,6 @@ import type { get } from 'http'
 
 export const useResumeStore = defineStore('resume', () => {
   // state
-  const resumeLoading = ref(true)
   const visitorCounterEnabled = ref<boolean>()
   const visitorCount = ref(0)
   const styles = ref({
@@ -15,6 +14,7 @@ export const useResumeStore = defineStore('resume', () => {
       text: ''
     }
   })
+  const resumeLoading = ref(true)
   const header = ref({
     firstName: '',
     lastName: '',
@@ -44,10 +44,10 @@ export const useResumeStore = defineStore('resume', () => {
   const extracurricular = ref([])
 
   // getters
-  const getResumeLoading = computed(() => resumeLoading.value)
   const getVisitorCounterEnabled = computed(() => visitorCounterEnabled.value)
   const getVisitorCount = computed(() => visitorCount.value)
   const getStyles = computed(() => styles.value)
+  const getResumeLoading = computed(() => resumeLoading.value)
   const getHeader = computed(() => header.value)
   const getSummary = computed(() => summary.value)
   const getExperience = computed(() => experience.value)
@@ -60,23 +60,21 @@ export const useResumeStore = defineStore('resume', () => {
   const getExtracurricular = computed(() => extracurricular.value)
 
   // actions
-  async function setResumeLoading() {
-    resumeLoading.value = !resumeLoading.value
-  }
 
   async function setVisitorCounterEnabled(enable: boolean) {
     visitorCounterEnabled.value = enable
   }
 
   async function setStylesData(path: string) {
+    const baseUrl = import.meta.env.BASE_URL || '/'
     try {
-      const res = await fetch(path)
+      const res = await fetch(`${baseUrl}${path}`)
       const data = await res.json()
 
       if (data) {
         styles.value.color = data.color
         styles.value.fontFamily = data.fontFamily
-        styles.value.loadingScreen.imageUrl = data.loadingScreen.imageUrl
+        styles.value.loadingScreen.imageUrl = `${baseUrl}${data.loadingScreen.imageUrl}`
         styles.value.loadingScreen.text = data.loadingScreen.text
         setResumeLoading()
       } else {
@@ -87,9 +85,14 @@ export const useResumeStore = defineStore('resume', () => {
     }
   }
 
+  async function setResumeLoading() {
+    resumeLoading.value = !resumeLoading.value
+  }
+
   async function setResumeData(path: string) {
+    const baseUrl = import.meta.env.BASE_URL || '/'
     try {
-      const res = await fetch(path)
+      const res = await fetch(`${baseUrl}${path}`)
       const data = await res.json()
 
       if (data) {
