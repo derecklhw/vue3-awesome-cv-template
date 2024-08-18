@@ -1,11 +1,11 @@
 <template>
-  <div
-    class="flex justify-center md:p-4"
-    :style="{ 'font-family': resumeStore.getStyles.fontFamily }"
-  >
+  <div class="flex justify-center" :style="{ 'font-family': resumeStore.getStyles.fontFamily }">
     <ResumeLoading v-if="resumeloading" />
 
-    <div class="py-8 px-6 md:px-24 space-y-4 w-full md:w-5/6 bg-white shadow-lg md:text-2xl" v-else>
+    <div
+      class="py-8 px-6 md:px-24 space-y-4 w-full md:w-5/6 bg-white shadow-lg md:text-2xl md:m-4"
+      v-else
+    >
       <ResumeVisitorCounter v-if="resumeStore.getVisitorCounterEnabled" />
       <ResumeHeader />
       <ResumeSummary />
@@ -52,9 +52,9 @@ onMounted(() => {
   initialiseResumeStore()
 })
 
-const initialiseResumeStore = () => {
-  resumeStore.setStylesData('styles.json')
-  resumeStore.setResumeData('resume.json')
+const initialiseResumeStore = async () => {
+  resumeStore.setStylesData(`/styles.json`)
+  resumeStore.setResumeData(`/resume.json`)
 
   resumeStore.setVisitorCounterEnabled(
     process.env.VUE_APP_INCREMENT_VISITOR_COUNT_API && process.env.VUE_APP_SET_VISITOR_COUNT_API

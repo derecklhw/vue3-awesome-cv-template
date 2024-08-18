@@ -21,7 +21,7 @@ const resumeStore = useResumeStore()
     <p class="italic text-gray-600 text-center">
       {{ resumeStore.getHeader.address }}
     </p>
-    <div class="flex space-x-2 flex-col md:flex-row text-center">
+    <div class="flex space-x-2 flex-col xl:flex-row text-center">
       <div v-if="resumeStore.getHeader.phone" class="flex justify-center items-center space-x-1">
         <font-awesome-icon icon="fa-solid fa-phone" />
         <p>{{ resumeStore.getHeader.phone }}</p>
