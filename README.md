@@ -45,20 +45,22 @@ The loading screen image and text can be switched by replacing `public/mario-jum
 
 ## Visitor Counter API
 
-This repository is a submodule of [k3ii/mscc-cloud-resume-challenge](https://github.com/k3ii/mscc-cloud-resume-challenge), which required the implementation of a visitor counter API using AWS services such as API Gateway, Lamdba and DynamoDB.
+This repository is a submodule of [k3ii/mscc-cloud-resume-challenge](https://github.com/k3ii/mscc-cloud-resume-challenge), which required the implementation of a visitor counter using different AWS services such as API Gateway, Lamdba and DynamoDB.
 
-You can implement your own visitor counter API to extend the *AWESOMENESS* of your resume and add the endpoint in `.env` file.
+Implement your own visitor counter API endpoints to extend the *AWESOMENESS* of your resume and update them in `.env` file.
 
 ```env
 VUE_APP_SET_VISITOR_COUNT_API=""
 VUE_APP_INCREMENT_VISITOR_COUNT_API=""
 ```
 
-If you **don't** want to use the visitor counter API, you just need to keep the values of the above environment variables empty.
+**Important:** If you don't want the visitor counter, you just need to keep the values of the above environment variables empty.
 
-### Expected Types and Responses of Visitor Counter API Endpoints
+### Types and Required Responses of the Visitor Counter API Endpoints
 
-1. Set Visitor Count
+Make sure to implement the following types and responses for the visitor counter API endpoints.
+
+1. Set Visitor Count - retrieve number of views
 
     ```sh
     {
@@ -69,8 +71,8 @@ If you **don't** want to use the visitor counter API, you just need to keep the 
     }
     ```
 
-2. Increment Visitor Count
-    
+2. Increment Visitor Count - increment and retrieve the number of views
+
     ```sh
     {
       "statusCode": 200,
@@ -98,9 +100,9 @@ If you **don't** want to use the visitor counter API, you just need to keep the 
 ## Deploy your own copy to GitHub Pages
 
 1. Fork the repository
-2. Change the `base` path in `vite.config.ts` to your repository name
-3. Push the changes to `main` branch as `GitHub Actions` will build and automatically deploy to GitHub Pages
-4. (Optional) If you want to deploy in a different branch, update `Deployment branches and tags` in your repository `Settings/Environment/Configure github-pages`.
+2. (Optional) Change the `base` path in `vite.config.ts` to the same name as the repository.
+3. Push your changes to the `main` branch, `GitHub Actions` will automatically build and deploy to `GitHub Pages`.
+4. (Optional) If you want to deploy using a different branch, update `Deployment branches and tags` in the repository settings `Environment/Configure github-pages`.
 
 ## Credit
 
