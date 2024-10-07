@@ -1,6 +1,5 @@
 import { ref, computed } from 'vue'
 import { defineStore } from 'pinia'
-import type { get } from 'http'
 
 export const useResumeStore = defineStore('resume', () => {
   // state

@@ -7,9 +7,18 @@
     "phone": "(+1) 555-JUMP-MAN",
     "homepage": "www.supermario.com",
     "socials": [
-      { "name": "Google", "url": "mario@gmail.com" },
-      { "name": "Github", "url": "itsamemario" },
-      { "name": "Linkedin", "url": "mariobros" }
+      {
+        "name": "Google",
+        "url": "mario@gmail.com"
+      },
+      {
+        "name": "Github",
+        "url": "itsamemario"
+      },
+      {
+        "name": "Linkedin",
+        "url": "mariobros"
+      }
     ],
     "quote": "It's-a me, Mario! Let's-a go!"
   },
@@ -26,6 +35,12 @@
         "Successfully thwarted numerous kidnapping attempts by Bowser, ensuring the safety of Princess Peach.",
         "Navigated through complex castle systems, overcoming various obstacles and enemies.",
         "Mastered the use of power-ups such as Super Mushrooms, Fire Flowers, and Star Power to combat threats."
+      ],
+      "skills": [
+        "Heroics",
+        "Princess Rescuing",
+        "Castle Navigation",
+        "Power-Up Mastery"
       ]
     },
     {
