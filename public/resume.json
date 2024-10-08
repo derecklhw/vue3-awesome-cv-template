@@ -1,62 +1,96 @@
 {
   "header": {
-    "firstName": "Mario",
-    "lastName": "Mario",
-    "title": "Professional Plumber · Hero of the Mushroom Kingdom",
-    "address": "123 Pipe Street, Mushroom Kingdom, 12345",
-    "phone": "(+1) 555-JUMP-MAN",
-    "homepage": "www.supermario.com",
+    "firstName": "Dereck",
+    "lastName": "Lam Hon Wah",
+    "title": "Software Engineer · Full Stack Development",
+    "address": "12, Remono Street, Rose-Hill, Mauritius",
+    "phone": "(+230) 5787-1057",
+    "homepage": "",
     "socials": [
       {
         "name": "Google",
-        "value": "mario@gmail.com",
+        "value": "dereck.lamhonwah@gmail.com",
         "url": ""
       },
       {
         "name": "Github",
-        "value": "itsmemario",
-        "url": "https://github.com/itsmemario"
+        "value": "derecklhw",
+        "url": "https://github.com/derecklhw"
       },
       {
         "name": "Linkedin",
-        "value": "mariobros",
-        "url": "https://www.linkedin.com/in/mariobros/"
+        "value": "derecklhw",
+        "url": "https://www.linkedin.com/in/derecklhw/"
       }
     ],
-    "quote": "It's-a me, Mario! Let's-a go!"
+    "quote": ""
   },
-  "summary": "Experienced hero and plumber with over 35 years of rescuing princesses, defeating evil kings, and saving various kingdoms. Skilled in jumping, powerup utilization, and kart racing. Known for quick problem-solving skills and adaptability in face of diverse challenges. Always ready for a new adventure, whether it's in 2D or 3D!",
+  "summary": "As a Software Engineer with 2 years of experience, I specialize in full-stack development, leveraging a diverse range of front-end and back-end technologies. Passionate about Linux, I excel in optimizing development environments through the command line and Vim commands. My contributions to open-source projects for different Mauritian tech communities reflect my commitment to collaborative innovation. Driven by a continuous desire to learn and grow, I am dedicated to delivering innovative solutions and making a substantial impact in the tech community.",
   "experience": [
     {
-      "company": "Mushroom Kingdom Royal Guard",
-      "url": "https://www.mushroomkingdom.com",
-      "location": "Mushroom Kingdom",
-      "title": "Chief Hero and Princess Rescuer",
-      "startDate": "Jul. 1985",
+      "company": "dodobird.ai",
+      "url": "https://www.dodobird.ai/",
+      "location": "Vacoas, Mauritius",
+      "title": "Software Engineer",
+      "startDate": "May. 2023",
       "endDate": "Present",
       "responsibilities": [
-        "Successfully thwarted numerous kidnapping attempts by Bowser, ensuring the safety of Princess Peach.",
-        "Navigated through complex castle systems, overcoming various obstacles and enemies.",
-        "Mastered the use of power-ups such as Super Mushrooms, Fire Flowers, and Star Power to combat threats."
+        "Led the front-end development and assisted the back-end development of an Autonomous AI Agent chatbot plugin for any content management and e‑commerce platforms like WordPress, Prestashop and Shopify.",
+        "Successfully led the migration from Node.js v14 to v18 and Vue.js 2 to Vue.js 3, enhancing the application’s performance and user experience.",
+        "Implemented pre-commit hook for automated E2E testing using Cypress and Husky.",
+        "Integrated a WAF (Web Application Firewall) using Cloudflare Turnstile and SSO (Single Sign-On) using AWS Cognito and OAuth.",
+        "Architect a solution by integrating a CASL, an isomorphic authorization Javascript library to manage tenant resource access.",
+        "Developed image upload feature using AWS S3 using pre-signed URLs for security."
       ],
       "skills": [
-        "Heroics",
-        "Princess Rescuing",
-        "Castle Navigation",
-        "Power-Up Mastery"
+        "Vue.js 2",
+        "Vue.js 3",
+        "Amazon Web Services",
+        "Linux",
+        "Node.js",
+        "Docker",
+        "Git",
+        "PostgreSQL",
+        "JavaScript",
+        "TypeScript",
+        "PHP",
+        "WordPress",
+        "Prisma ORM"
       ]
     },
     {
-      "company": "Mario Bros. Plumbing",
-      "url": "https://www.mariobrosplumbing.com",
-      "location": "Brooklyn, New York",
-      "title": "Co-Founder & Master Plumber",
-      "startDate": "Jun. 1983",
-      "endDate": "Jul. 1985",
+      "company": "Middlesex University Mauritius",
+      "url": "https://www.middlesex.mu/",
+      "location": "Flic en flac, Mauritius",
+      "title": "Student Learning Assistant",
+      "startDate": "Mar. 2023",
+      "endDate": "Apr. 2024",
       "responsibilities": [
-        "Co-founded and operated a successful plumbing business with brother Luigi.",
-        "Specialized in pipe repair, drain cleaning, and mysterious underworld pipe system navigation.",
-        "Developed innovative techniques for coin collection and turtle shell repurposing."
+        "Acted as a ‘buddy’ to their new peers who freshly joined the university during induction and the first month of their study.",
+        "Acted as facilitator working closely with Academics.",
+        "Offered peer assistance through consultations."
+      ]
+    },
+    {
+      "company": "OceanDBA",
+      "url": "https://www.oceandba.com/",
+      "location": "Quatre Bornes, Mauritius",
+      "title": "Software Engineer Intern",
+      "startDate": "May. 2023",
+      "endDate": "Present",
+      "responsibilities": [
+        "Completed training sessions on Linux system administration and MariaDB database management.",
+        "Built a command‑line Python application which allows the internal operation team to execute secure bash commands on a proxy without direct access to the customers’ machines.",
+        "Built a GoLang application with a TUI and CLI interface to help the automation team in the client machine deployment process. It provides real‑time insights into deployed machines across client nodes and simplifies deployment using Terraform and the Proxmox provider, by significantly reducing overhead."
+      ],
+      "skills": [
+        "Go",
+        "Linux",
+        "Linux System Administration",
+        "Python",
+        "MariaDB",
+        "Git",
+        "Terraform"
       ]
     }
   ],
