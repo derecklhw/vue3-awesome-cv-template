@@ -1,6 +1,11 @@
 <template lang="">
-  <div class="flex justify-center md:justify-end font-bold underline text-lg">
-    <p>Visitor Counter: {{ resumeStore.getVisitorCount }}</p>
+  <div class="flex justify-center md:justify-end font-bold text-lg">
+    <div class="flex flex-col items-center md:items-end gap-6 md:gap-4">
+      <Button @click="print" class="hover:bg-white-700 border font-bold py-2 px-4 rounded"
+        >Print my CV
+      </Button>
+      <p class="underline">Visitor Counter: {{ resumeStore.getVisitorCount }}</p>
+    </div>
   </div>
 </template>
 <script setup lang="ts">
@@ -18,5 +23,9 @@ onMounted(() => {
     clearInterval(intervalId)
   })
 })
+
+const print = () => {
+  window.print()
+}
 </script>
 <style lang=""></style>
