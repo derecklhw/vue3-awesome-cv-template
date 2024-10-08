@@ -24,6 +24,7 @@ export const useResumeStore = defineStore('resume', () => {
     socials: [
       {
         name: '',
+        value: '',
         url: ''
       }
     ],

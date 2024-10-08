@@ -9,15 +9,18 @@
     "socials": [
       {
         "name": "Google",
-        "url": "mario@gmail.com"
+        "value": "mario@gmail.com",
+        "url": ""
       },
       {
         "name": "Github",
-        "url": "itsamemario"
+        "value": "itsmemario",
+        "url": "https://github.com/itsmemario"
       },
       {
         "name": "Linkedin",
-        "url": "mariobros"
+        "value": "mariobros",
+        "url": "https://www.linkedin.com/in/mariobros/"
       }
     ],
     "quote": "It's-a me, Mario! Let's-a go!"

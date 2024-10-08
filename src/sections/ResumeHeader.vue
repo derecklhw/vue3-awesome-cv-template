@@ -39,7 +39,14 @@ const resumeStore = useResumeStore()
       >
         <span class="hidden md:inline">|</span>
         <font-awesome-icon :icon="['fa-brands', item.name.toLowerCase()]" />
-        <p>{{ item.url }}</p>
+        <a
+          v-if="/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/.test(item.value)"
+          :href="'mailto:' + item.value"
+          class="hover:underline"
+        >
+          {{ item.value }}
+        </a>
+        <a v-else :href="item.url" class="hover:underline">{{ item.value }}</a>
       </div>
     </div>
     <p class="italic text-gray-600 text-center">
