@@ -40,7 +40,8 @@
         "Implemented pre-commit hook for automated E2E testing using Cypress and Husky.",
         "Integrated a WAF (Web Application Firewall) using Cloudflare Turnstile and SSO (Single Sign-On) using AWS Cognito and OAuth.",
         "Architect a solution by integrating a CASL, an isomorphic authorization Javascript library to manage tenant resource access.",
-        "Developed image upload feature using AWS S3 using pre-signed URLs for security."
+        "Developed image upload feature using AWS S3 using pre-signed URLs for security.",
+        "Maintaining and implementing new features in the company's SASS web application using different front‑end and back‑end technologies."
       ],
       "skills": [
         "Vue.js 2",
@@ -67,8 +68,7 @@
       "endDate": "Apr. 2024",
       "responsibilities": [
         "Acted as a ‘buddy’ to their new peers who freshly joined the university during induction and the first month of their study.",
-        "Acted as facilitator working closely with Academics.",
-        "Offered peer assistance through consultations."
+        "Acted as facilitator working closely with Academics and offered peer assistance through consultations."
       ]
     },
     {
@@ -97,22 +97,16 @@
   "honors": {
     "international": [
       {
-        "title": "Gold Medal",
-        "event": "Olympic Games",
-        "date": "2020",
-        "location": "Tokyo, Japan"
+        "title": "Winner",
+        "event": "4th Edition of Digicup",
+        "date": "2024",
+        "location": "Moka, Mauritius"
       },
       {
-        "title": "MVP",
-        "event": "Smash Bros. Ultimate Tournament",
-        "date": "2018",
-        "location": "Los Angeles, U.S.A"
-      },
-      {
-        "title": "Best Mustache",
-        "event": "Facial Hair Bros. Competition",
-        "date": "2014",
-        "location": "Paris, France"
+        "title": "5th Place",
+        "event": "Innovation Mauritius University Students AI Challenge",
+        "date": "2023",
+        "location": "Port Louis, Mauritius"
       }
     ],
     "domestic": [
@@ -138,37 +132,145 @@
   },
   "presentation": [
     {
-      "company": "Goomba Stomping Seminar",
-      "location": "Mushroom Kingdom",
-      "title": "Keynote Speaker on Advanced Jumping Techniques",
-      "startDate": "Sep. 2021",
-      "endDate": "Oct. 2021",
+      "company": "Front-End Coders Mauritius",
+      "url": "https://github.com/derecklhw/speaker_talks",
+      "location": "Port Louis, Mauritius",
+      "title": "October 2024 Monthly Meetup",
+      "startDate": "",
+      "endDate": "Oct. 2024",
       "responsibilities": [
-        "Demonstrated various jumping techniques including the Triple Jump, Wall Jump, and Long Jump.",
-        "Discussed the history and evolution of enemy-stomping strategies in platform games."
+        "Skyrocket your Git Workflow"
       ]
     },
     {
-      "company": "8th Pixel-Con (Retro Gaming Conference)",
-      "location": "New Donk City",
-      "title": "Presenter for 'From 8-bit to HD: My Journey Through Video Game History'",
-      "startDate": "Apr. 2019",
-      "endDate": "",
+      "company": "Mauritius Software Craftsmanship Community",
+      "url": "https://github.com/derecklhw/speaker_talks",
+      "location": "Port Louis, Mauritius",
+      "title": "Developers Conference 2024",
+      "startDate": "",
+      "endDate": "Jul. 2024",
       "responsibilities": [
-        "Shared personal experiences of starring in video games across multiple generations and technological advancements."
+        "Kickstart Your Cloud Journey by conquering the AWS Cloud Resume Challenge.",
+        "Updates on the Mauritian Linux Mirrors.",
+        "Lighting Talks - Git Diffing Algorithms."
+      ]
+    },
+    {
+      "company": "Mauritius Software Craftsmanship Community",
+      "url": "https://github.com/derecklhw/speaker_talks",
+      "location": "Phoenix, Mauritius",
+      "title": "June 2024 Monthly Meetup",
+      "startDate": "",
+      "endDate": "Jun. 2024",
+      "responsibilities": [
+        "Understanding the inner anatomy of GIT."
+      ]
+    },
+    {
+      "company": "Front-End Coders Mauritius",
+      "url": "https://github.com/derecklhw/speaker_talks",
+      "location": "Ebene, Mauritius",
+      "title": "February 2024 Monthly Meetup",
+      "startDate": "",
+      "endDate": "Mar. 2024",
+      "responsibilities": [
+        "Git LFS - Large File Storage Management in Version Control"
+      ]
+    },
+    {
+      "company": "Mauritius Software Craftsmanship Community",
+      "url": "https://github.com/derecklhw/speaker_talks",
+      "location": "Port Louis, Mauritius",
+      "title": "Developers Conference 2023 - Linux Bootcamp",
+      "startDate": "",
+      "endDate": "Jul. 2023",
+      "responsibilities": [
+        "Understanding the boot process.",
+        "Working with Systemd services."
       ]
     }
   ],
   "writing": [
     {
-      "company": "The Plumber's Guide to Saving Princesses",
-      "location": "Mushroom Kingdom Press",
-      "title": "AUTHOR",
-      "startDate": "Jan. 2020",
-      "endDate": "",
+      "company": "",
+      "url": "https://github.com/Front-End-Coders-Mauritius/automatic-meetup-video",
+      "location": "",
+      "title": "frontend.mu - Automatic Meetup Video",
+      "startDate": "Sep. 2024",
+      "endDate": "Present",
       "responsibilities": [
-        "Wrote a comprehensive guide on princess-saving techniques, castle navigation, and boss battle strategies."
+        "It automatically generates videos to promote frontend.mu meetups on social media, which were previously edited on Canva."
+      ],
+      "skills": [
+        "React.js"
       ]
+    },
+    {
+      "company": "",
+      "url": "https://github.com/derecklhw/vue3-awesome-cv-template",
+      "location": "",
+      "title": "The Cloud Resume Challenge - AWS",
+      "startDate": "Jun. 2024",
+      "endDate": "Present",
+      "responsibilities": [
+        "It is not a tutorial or a how-to guide to start or elevate your career into the cloud, it uses an objective-based approach, promoting self-learning, googling and prompt engineering.",
+        "Front end - Write a resume using Vue.js 3 and Pinia, deployed online as an Amazon S3 static website and fronted with DNS/Cloudfront.",
+        "Back end - Version control using Git and AWS Lambda functions to save the visitor counter to the database.",
+        "Automation/CI - Automated infrastructure with AWS SAM and Terraform, and deployment via GitHub Actions."
+      ],
+      "skills": [
+        "Amazon Web Services",
+        "Vue.js 3",
+        "Terraform",
+        "Git"
+      ]
+    },
+    {
+      "company": "",
+      "url": "https://drive.google.com/file/d/1b54l9sGsRxgya21OvTBGcwhqSUMuH-mH/view?usp=sharing",
+      "location": "",
+      "title": "Seaguard - 4th Edition of DigiCup",
+      "startDate": "Aug. 2024",
+      "endDate": "Sep. 2024",
+      "responsibilities": [
+        "We partnered with SAVETHEBLUE and WHALEUP to develop a platform focused on raising awareness of the tourism overexploitation of whales and dolphins in Mauritian beautiful seas."
+      ],
+      "skills": [
+        "Nuxt",
+        "Vue.js 3",
+        "Microsoft Azure",
+        "Git",
+        "Google Gemini",
+        "Shadcn",
+        "Vercel"
+      ]
+    },
+    {
+      "company": "",
+      "url": "https://github.com/mscraftsman/devfest2023",
+      "location": "",
+      "title": "Google Developer Groups Mauritius - Devfest 2023 Website",
+      "startDate": "",
+      "endDate": "Oct. 2023",
+      "responsibilities": [],
+      "skills": [
+        "Laravel",
+        "Blade",
+        "Alphine js",
+        "Git"
+      ]
+    },
+    {
+      "company": "",
+      "url": "https://drive.google.com/drive/folders/1i016CZLA8bAQ-3Rl4QWvtkzXSWuKiGJp",
+      "location": "",
+      "title": "MOSIME - 5th Edition Innovation Mauritius",
+      "startDate": "",
+      "endDate": "Oct. 2023",
+      "responsibilities": [
+        "It was an AI‑driven urban Mobility initiative, that harnesses the capabilities of generative AI to improve road safety and reduce traffic congestion in Mauritius."
+      ],
+      "skills": []
     }
   ],
   "committee": [
@@ -217,38 +319,63 @@
   ],
   "education": [
     {
-      "company": "Mushroom Kingdom Plumbing Academy",
-      "location": "Toad Town, Mushroom Kingdom",
-      "title": "MASTER'S DEGREE IN ADVANCED PLUMBING AND HEROICS",
-      "startDate": "Sep. 1980",
-      "endDate": "Jun. 1983",
-      "responsibilities": [
-        "Graduated with honors. Received the Golden Plunger Award for excellence in practical applications."
-      ]
+      "company": "Middlesex University Mauritius",
+      "location": "Flic en Flac, Mauritius",
+      "title": "B.S.C Computer Science (System Engineering) - First Class Honors",
+      "startDate": "Sep. 2020",
+      "endDate": "May. 2024",
+      "responsibilities": []
+    },
+    {
+      "company": "St Mary's College",
+      "location": "Rose-Hill, Mauritius",
+      "title": "Cambridge International (GCE) AS and A Level)",
+      "startDate": "Jan. 2010",
+      "endDate": "Dec. 2016",
+      "responsibilities": []
     }
   ],
   "extracurricular": [
     {
-      "company": "Mushroom Kingdom Sports Association",
-      "location": "Mushroom Kingdom",
-      "title": "All-Star Athlete",
-      "startDate": "Jan. 1996",
+      "company": "frontend.mu",
+      "location": "",
+      "title": "Active Community Member & Contributor",
+      "startDate": "May. 2023",
       "endDate": "Present",
       "responsibilities": [
-        "Participated in various sports including tennis, golf, soccer, and Olympic events.",
-        "Organized friendly competitions to promote sportsmanship across different kingdoms."
+        "Develop and produce engaging advertisement videos to effectively promote the monthly meetups, enhancing community participation and visibility.",
+        "Implement new features and resolve bugs, contributing to an improved user experience and functionality in the frontend.mu website."
       ]
     },
     {
-      "company": "Warp Pipe Explorers Club",
-      "location": "Various Kingdoms",
-      "title": "Founding Member",
-      "startDate": "Jul. 1985",
+      "company": "Mauritius Software Craftsmanship Community",
+      "location": "",
+      "title": "Squad Member & Contributor",
+      "startDate": "Jul. 2023",
       "endDate": "Present",
       "responsibilities": [
-        "Led expeditions to discover and map out new warp pipe routes across multiple worlds.",
-        "Conducted research on the physics of pipe travel and its applications in modern transportation.",
-        "Mentored young adventurers in the art of safe and effective warp pipe navigation."
+        "Assist the organizing team since 2023 at events like DevFest and DevCon."
+      ]
+    },
+    {
+      "company": "IEEE Middlesex University Mauritius Student Branch",
+      "url": "https://edu.ieee.org/mu-mum/",
+      "location": "Flic en Flac, Mauritius",
+      "title": "Chairperson",
+      "startDate": "Feb. 2023",
+      "endDate": "Feb 2024",
+      "responsibilities": [
+        "Project lead for the IEEEmdxthon 2023, the 2nd edition of the IEEE MUM SB 24‑hour Web Development hackathon and the BattleXBot 2023, the 1st edition of the first battle bot competition in Mauritius."
+      ]
+    },
+    {
+      "company": "The Mauritius Scout Association - 19th Lower Plaines Wilhems Scout Troop",
+      "location": "",
+      "title": "Scout Leader",
+      "startDate": "Jan. 2012",
+      "endDate": "Mar. 2023",
+      "responsibilities": [
+        "Organized and conducted weekly societal and environmental projects for about 80 young scouts using excellent management and organizational skills."
       ]
     }
   ]

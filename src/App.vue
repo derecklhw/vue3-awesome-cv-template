@@ -10,13 +10,13 @@
       <ResumeHeader />
       <ResumeSummary />
       <ResumeExperience />
-      <ResumeHonors />
       <ResumePresentation />
+      <ResumeHonors />
       <ResumeWriting />
-      <ResumeCommittee />
-      <ResumeSkills />
-      <ResumeEducation />
+      <!-- <ResumeCommittee /> -->
+      <!-- <ResumeSkills /> -->
       <ResumeExtracurricular />
+      <ResumeEducation />
       <ResumeFooter />
     </div>
   </div>

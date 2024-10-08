@@ -9,7 +9,7 @@ const resumeStore = useResumeStore()
 
 <template>
   <div>
-    <subheader subheader="Writing" />
+    <subheader subheader="Projects" />
     <detaillisting :items="resumeStore.getWriting" />
   </div>
 </template>

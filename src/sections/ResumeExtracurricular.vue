@@ -9,7 +9,7 @@ const resumeStore = useResumeStore()
 
 <template>
   <div>
-    <subheader subheader="Extracurricular" />
+    <subheader subheader="Volunteering" />
     <detaillisting :items="resumeStore.getExtracurricular" />
   </div>
 </template>
