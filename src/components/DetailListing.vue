@@ -2,16 +2,22 @@
   <div class="space-y-4 md:space-y-8">
     <div v-for="(item, index) in items" :key="index">
       <div class="flex justify-between flex-col md:flex-row">
-        <a v-if="item.url" :href="item.url" target="_blank" class="text-2xl font-bold">
-          {{ item.company }}
-        </a>
-        <h3 v-else class="text-2xl font-bold">{{ item.company }}</h3>
-        <p class="italic">
+        <div v-if="item.url && item.company">
+          <a :href="item.url" target="_blank" class="text-2xl font-bold hover:underline">
+            {{ item.company }}
+          </a>
+          <a :href="item.url" class="text-gray-600 italic text-sm md:text-base">
+            (Click for more details)
+          </a>
+        </div>
+        <h3 v-else-if="!item.url && item.company" class="text-2xl font-bold">{{ item.company }}</h3>
+        <p v-if="item.location" class="italic">
           {{ item.location }}
         </p>
       </div>
       <div class="flex justify-between flex-col md:flex-row mb-2">
         <p
+          v-if="item.company && item.title"
           class="uppercase text-justify"
           :style="{
             color: resumeStore.getStyles.color ? resumeStore.getStyles.color : 'rgb(220 38 38)'
@@ -19,10 +25,29 @@
         >
           {{ item.title }}
         </p>
-        <p class="text-gray-600 italic" v-if="item.endDate">
+        <div v-else-if="!item.company && item.title">
+          <a
+            class="uppercase text-justify hover:underline"
+            :href="item.url"
+            :style="{
+              color: resumeStore.getStyles.color ? resumeStore.getStyles.color : 'rgb(220 38 38)'
+            }"
+          >
+            {{ item.title }}
+          </a>
+          <a :href="item.url" class="text-gray-600 italic text-sm md:text-base">
+            (Click for more details)
+          </a>
+        </div>
+        <p class="text-gray-600 italic" v-if="item.startDate && item.endDate">
           {{ item.startDate }} - {{ item.endDate }}
         </p>
-        <p class="text-gray-600 italic" v-else>{{ item.startDate }} - Present</p>
+        <p class="text-gray-600 italic" v-else-if="item.startDate && !item.endDate">
+          {{ item.startDate }} - Present
+        </p>
+        <p class="text-gray-600 italic" v-else-if="!item.startDate && item.endDate">
+          {{ item.endDate }}
+        </p>
       </div>
       <ul class="list-disc list-inside">
         <li
