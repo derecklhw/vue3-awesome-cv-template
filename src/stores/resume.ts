@@ -74,7 +74,7 @@ export const useResumeStore = defineStore('resume', () => {
       if (data) {
         styles.value.color = data.color
         styles.value.fontFamily = data.fontFamily
-        styles.value.loadingScreen.imageUrl = `${baseUrl}${data.loadingScreen.imageUrl}`
+        styles.value.loadingScreen.imageUrl = `${data.loadingScreen.imageUrl}`
         styles.value.loadingScreen.text = data.loadingScreen.text
         setResumeLoading()
       } else {
