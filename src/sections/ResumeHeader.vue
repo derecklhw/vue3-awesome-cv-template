@@ -6,7 +6,7 @@ const resumeStore = useResumeStore()
 
 <template>
   <div class="flex flex-col items-center space-y-4">
-    <div class="flex flex-col items-center md:flex-row space-x-2 text-5xl md:text-8xl text-center">
+    <div class="flex flex-col items-center xl:flex-row space-x-2 text-5xl md:text-8xl text-center">
       <h1 class="font-thin">{{ resumeStore.getHeader.firstName }}</h1>
       <h1 class="font-bold">{{ resumeStore.getHeader.lastName }}</h1>
     </div>
@@ -42,11 +42,12 @@ const resumeStore = useResumeStore()
         <a
           v-if="/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/.test(item.value)"
           :href="'mailto:' + item.value"
+          target="_blank"
           class="hover:underline"
         >
           {{ item.value }}
         </a>
-        <a v-else :href="item.url" class="hover:underline">{{ item.value }}</a>
+        <a v-else :href="item.url" target="_blank" class="hover:underline">{{ item.value }}</a>
       </div>
     </div>
     <p class="italic text-gray-600 text-center">

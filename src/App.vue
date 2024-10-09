@@ -1,6 +1,8 @@
 <template>
   <div class="flex justify-center" :style="{ 'font-family': resumeStore.getStyles.fontFamily }">
-    <div class="py-8 px-6 md:px-24 space-y-4 w-full md:w-5/6 bg-white shadow-lg md:text-2xl md:m-4">
+    <div
+      class="py-8 px-6 md:px-10 lg:px-18 xl:px-24 space-y-4 w-full lg:w-5/6 bg-white shadow-lg md:text-2xl md:m-4"
+    >
       <ResumeUtilities />
       <ResumeHeader />
       <ResumeSummary />

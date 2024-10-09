@@ -32,15 +32,26 @@
 
 ## Customization
 
-Go to `public` directory and edit `resume.json` or `styles.json` file to customize your CV. Keep the structure of the JSON file as it is especially the keys.
-
-The loading screen image and text can be switched by replacing `public/mario-jump.gif` file and changing the file path in `styles.json`.
+To add other social media links in the `ResumeHeader.vue`, edit the `socials` object in `resume.json` and for the proper icon, the `name` should correspond the **icon name** in the [Font Awesome Library Brands](https://fontawesome.com/search?o=r&f=brands).
 
 ```json
- "loadingScreen": {
-    "imageUrl": "/mario-jump.gif",
-    "text": "Here we go... preparing your adventure!"
-  }
+ "socials": [
+      {
+        "name": "Google",
+        "value": "mario@gmail.com",
+        "url": ""
+      },
+      {
+        "name": "Github",
+        "value": "itsmemario",
+        "url": "https://github.com/itsmemario"
+      },
+      {
+        "name": "Linkedin",
+        "value": "mariobros",
+        "url": "https://www.linkedin.com/in/mariobros/"
+      }
+    ],
 ```
 
 ## Visitor Counter API
