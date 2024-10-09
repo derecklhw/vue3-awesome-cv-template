@@ -1,12 +1,7 @@
 <template>
   <div class="flex justify-center" :style="{ 'font-family': resumeStore.getStyles.fontFamily }">
-    <ResumeLoading v-if="resumeloading" />
-
-    <div
-      class="py-8 px-6 md:px-24 space-y-4 w-full md:w-5/6 bg-white shadow-lg md:text-2xl md:m-4"
-      v-else
-    >
-      <ResumeVisitorCounter v-if="resumeStore.getVisitorCounterEnabled" />
+    <div class="py-8 px-6 md:px-24 space-y-4 w-full md:w-5/6 bg-white shadow-lg md:text-2xl md:m-4">
+      <ResumeUtilities />
       <ResumeHeader />
       <ResumeSummary />
       <ResumeExperience />
@@ -24,10 +19,9 @@
 
 <script setup lang="ts">
 import { useResumeStore } from '@/stores/resume'
-import { onMounted, computed } from 'vue'
+import { onMounted } from 'vue'
 
-import ResumeLoading from './components/ResumeLoading.vue'
-import ResumeVisitorCounter from './sections/ResumeVisitorCounter.vue'
+import ResumeUtilities from './sections/ResumeUtilities.vue'
 import ResumeHeader from './sections/ResumeHeader.vue'
 import ResumeSummary from './sections/ResumeSummary.vue'
 import ResumeExperience from './sections/ResumeExperience.vue'
@@ -42,20 +36,11 @@ import ResumeFooter from './sections/ResumeFooter.vue'
 
 const resumeStore = useResumeStore()
 
-const resumeloading = computed(() =>
-  resumeStore.getVisitorCounterEnabled
-    ? resumeStore.getResumeLoading || resumeStore.getVisitorCount === 0
-    : resumeStore.getResumeLoading
-)
-
 onMounted(() => {
-  initialiseResumeStore()
+  initializeResumeStore()
 })
 
-const initialiseResumeStore = async () => {
-  resumeStore.setStylesData(`/styles.json`)
-  resumeStore.setResumeData(`/resume.json`)
-
+const initializeResumeStore = async () => {
   resumeStore.setVisitorCounterEnabled(
     process.env.VUE_APP_INCREMENT_VISITOR_COUNT_API && process.env.VUE_APP_SET_VISITOR_COUNT_API
       ? true

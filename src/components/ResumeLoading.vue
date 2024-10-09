@@ -3,7 +3,7 @@
     class="grid h-screen w-screen bg-white content-center justify-items-center"
     v-if="resumeStore.getStyles.loadingScreen.imageUrl"
   >
-    <img :src="resumeStore.getStyles.loadingScreen.imageUrl" />
+    <img :src="`${baseUrl}/${resumeStore.getStyles.loadingScreen.imageUrl}`" />
     <span class="blink_me text-3xl md:text-4xl text-center">{{
       resumeStore.getStyles.loadingScreen.text
         ? resumeStore.getStyles.loadingScreen.text
@@ -21,6 +21,7 @@
 <script setup lang="ts">
 import { useResumeStore } from '@/stores/resume'
 const resumeStore = useResumeStore()
+const baseUrl = import.meta.env.BASE_URL || '/'
 </script>
 <style scoped>
 .blink_me {

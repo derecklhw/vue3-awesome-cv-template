@@ -2,7 +2,7 @@
   "color": "",
   "fontFamily": "",
   "loadingScreen": {
-    "imageUrl": "/mario-jump.gif",
+    "imageUrl": "mario-jump.gif",
     "text": "Here we go... preparing your adventure!"
   }
 }
