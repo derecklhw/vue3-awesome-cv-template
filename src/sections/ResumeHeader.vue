@@ -6,7 +6,7 @@ const resumeStore = useResumeStore()
 
 <template>
   <div class="flex flex-col items-center space-y-4">
-    <div class="flex flex-col items-center md:flex-row space-x-2 text-5xl md:text-8xl">
+    <div class="flex flex-col items-center md:flex-row space-x-2 text-5xl md:text-8xl text-center">
       <h1 class="font-thin">{{ resumeStore.getHeader.firstName }}</h1>
       <h1 class="font-bold">{{ resumeStore.getHeader.lastName }}</h1>
     </div>

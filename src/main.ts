@@ -10,9 +10,23 @@ library.add(faHouse, faPhone, ...Object.values(fab))
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 import App from './App.vue'
+import { useResumeStore } from './stores/resume'
 
 const app = createApp(App)
 app.component('font-awesome-icon', FontAwesomeIcon)
 app.use(createPinia())
 
-app.mount('#app')
+const resumeStore = useResumeStore()
+
+async function loadResumeData() {
+  await resumeStore.setStylesData(`/styles.json`)
+  await resumeStore.setResumeData(`/resume.json`)
+
+  // Set the document title after the data has been loaded
+  document.title = resumeStore.getHeader.firstName + ' ' + resumeStore.getHeader.lastName + ' - CV'
+}
+
+// Call the async function
+loadResumeData().then(() => {
+  app.mount('#app')
+})
