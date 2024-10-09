@@ -17,9 +17,16 @@ app.component('font-awesome-icon', FontAwesomeIcon)
 app.use(createPinia())
 
 const resumeStore = useResumeStore()
-await resumeStore.setStylesData(`/styles.json`)
-await resumeStore.setResumeData(`/resume.json`)
 
-document.title = resumeStore.getHeader.firstName + ' ' + resumeStore.getHeader.lastName + ' - CV '
+async function loadResumeData() {
+  await resumeStore.setStylesData(`/styles.json`)
+  await resumeStore.setResumeData(`/resume.json`)
 
-app.mount('#app')
+  // Set the document title after the data has been loaded
+  document.title = resumeStore.getHeader.firstName + ' ' + resumeStore.getHeader.lastName + ' - CV'
+}
+
+// Call the async function
+loadResumeData().then(() => {
+  app.mount('#app')
+})
