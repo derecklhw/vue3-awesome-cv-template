@@ -216,7 +216,7 @@
         "It is not a tutorial or a how-to guide to start or elevate your career into the cloud, it uses an objective-based approach, promoting self-learning, googling and prompt engineering.",
         "Front end - Write a resume using Vue.js 3 and Pinia, deployed online as an Amazon S3 static website and fronted with DNS/Cloudfront.",
         "Back end - Version control using Git and AWS Lambda functions to save the visitor counter to the database.",
-        "Automation/CI - Automated infrastructure with AWS SAM and Terraform, and deployment via GitHub Actions."
+        "Automation/CI - Automated infrastructure with Terraform, and deployment via GitHub Actions."
       ],
       "skills": [
         "Amazon Web Services",
@@ -252,7 +252,9 @@
       "title": "Google Developer Groups Mauritius - Devfest 2023 Website",
       "startDate": "",
       "endDate": "Oct. 2023",
-      "responsibilities": [],
+      "responsibilities": [
+        "Assisted in designing and developing the website speaker page and agenda for the Devfest 2023 event."
+      ],
       "skills": [
         "Laravel",
         "Blade",
