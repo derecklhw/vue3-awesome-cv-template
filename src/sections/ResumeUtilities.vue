@@ -1,6 +1,6 @@
 <template lang="">
   <div
-    :class="`flex flex-col-reverse md:flex-row justify-center md:justify-between text-center gap-6 font-bold text-lg print:hidden`"
+    :class="`flex flex-col-reverse sm:flex-row justify-center sm:justify-between text-center gap-6 font-semibold sm:font-bold text-base sm:text-lg print:hidden`"
   >
     <p v-if="resumeStore.getVisitorCounterEnabled && resumeStore.getVisitorCount">
       Visitor Counter: {{ displayedCount }}
@@ -12,9 +12,14 @@
       <p>Visitor Counter:</p>
       <SpinnersThreeDotsBounce />
     </div>
-    <Button @click="print" class="hover:bg-gray-50 border-2 font-bold py-2 px-4 rounded"
-      >Print my CV
-    </Button>
+    <div class="flex gap-4 justify-center">
+      <Button @click="print" class="hover:bg-gray-50 border-2 font-bold py-2 px-4 rounded"
+        >Print my CV
+      </Button>
+      <a href="https://github.com/derecklhw/vue3-awesome-cv-template" target="_blank">
+        <font-awesome-icon :icon="['fa-brands', 'fa-github']" class="size-12 hover:text-gray-500" />
+      </a>
+    </div>
   </div>
 </template>
 <script setup lang="ts">

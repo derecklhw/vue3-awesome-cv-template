@@ -1,12 +1,16 @@
 <template lang="">
   <div class="space-y-4 md:space-y-8">
     <div v-for="(item, index) in items" :key="index">
-      <div class="flex justify-between flex-col md:flex-row">
+      <div class="flex justify-between flex-col xl:flex-row">
         <div v-if="item.url && item.company">
           <a :href="item.url" target="_blank" class="text-2xl font-bold hover:underline">
             {{ item.company }}
           </a>
-          <a :href="item.url" class="text-gray-600 italic text-sm md:text-base print:hidden">
+          <a
+            :href="item.url"
+            class="text-gray-600 italic text-sm md:text-base print:hidden"
+            target="_blank"
+          >
             (Click for more details)
           </a>
         </div>
@@ -15,7 +19,7 @@
           {{ item.location }}
         </p>
       </div>
-      <div class="flex justify-between flex-col md:flex-row mb-2">
+      <div class="flex justify-between flex-col xl:flex-row mb-2">
         <p
           v-if="item.company && item.title"
           class="uppercase text-justify"
@@ -29,13 +33,18 @@
           <a
             class="uppercase text-justify hover:underline"
             :href="item.url"
+            target="_blank"
             :style="{
               color: resumeStore.getStyles.color ? resumeStore.getStyles.color : 'rgb(220 38 38)'
             }"
           >
             {{ item.title }}
           </a>
-          <a :href="item.url" class="text-gray-600 italic text-sm md:text-base print:hidden">
+          <a
+            :href="item.url"
+            class="text-gray-600 italic text-sm md:text-base print:hidden"
+            target="_blank"
+          >
             (Click for more details)
           </a>
         </div>
