@@ -6,7 +6,7 @@
           <a :href="item.url" target="_blank" class="text-2xl font-bold hover:underline">
             {{ item.company }}
           </a>
-          <a :href="item.url" class="text-gray-600 italic text-sm md:text-base">
+          <a :href="item.url" class="text-gray-600 italic text-sm md:text-base print:hidden">
             (Click for more details)
           </a>
         </div>
@@ -35,7 +35,7 @@
           >
             {{ item.title }}
           </a>
-          <a :href="item.url" class="text-gray-600 italic text-sm md:text-base">
+          <a :href="item.url" class="text-gray-600 italic text-sm md:text-base print:hidden">
             (Click for more details)
           </a>
         </div>

@@ -6,3 +6,9 @@
   background-color: rgb(115 115 115);
   width: 100%;
 }
+
+@media print {
+  .print\:hidden {
+    display: none !important;
+  }
+}
